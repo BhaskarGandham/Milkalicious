@@ -1,0 +1,60 @@
+
+<div style="text-align: center; background-color: rgb(223, 233, 240);">
+
+
+    <div class="main-content">
+        <h3>Experience the pure essence of nature with every sip of milk</h3>
+    </div><br><br>
+
+    <div class="banner">
+        <img src="assets/images/bannner1.jpg" alt="Banner Image" class="background-image">
+        <img src="assets/images/milkalicious-high-resolution-logo-transparent.png" alt="Logo" class="centered-logo">
+    </div><br><br>
+
+    <div class="banner1">
+      <img src="assets/images/allproducts.jpeg"  class="background-image1">
+      <div class="productscontainer">
+        <div class="row">
+          <div class="col d-flex justify-content-center align-items-center">
+            <button class="order-button" (click)="goToProductsPage()">View Products</button>
+          </div>
+        </div>
+      </div>
+    </div><br><br>
+
+    
+
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4" style="padding: 30px;">
+          <div class="col" *ngFor="let video of videoData">
+            <div class="television-frame">
+              <video [src]="video.videoUrl" class="card-video"  autoplay></video>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+   
+    <br><br>
+
+      
+    <div>
+        <img src="assets/images/dairy 1..png"  alt="naturaldairy" style=" width: 90vw;height: auto; border-radius: 40px; border: 3px solid;">
+    </div>
+    <br><br><br>
+
+    <div>
+        <img src="/assets/images/dairy 2.png"  alt="deliveryprocess" style=" width: 90vw;height: auto; border-radius: 40px; border: 3px solid;" >
+    </div>
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4" style="padding: 30px;">
+        <div class="col" *ngFor="let card of cardData">
+          <div class="card" style="width: 12rem; border: 1px solid;">
+            <img [src]="card.imageUrl" class="card-img-top equal-size-image" alt="...">
+          </div>
+        </div>
+      </div>
+  </div>
+    <app-footer></app-footer>
+   
+    

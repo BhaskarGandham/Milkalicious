@@ -1,0 +1,57 @@
+<div style="margin: auto; text-align: center;padding:100px; background-color: rgb(223, 233, 240);">
+  <div></div>
+  <div class="row">
+    <ng-container *ngFor="let product of products">
+      <div class="col-sm">
+        <div class="card">
+          <img [src]="product.imgsrc" class="card-img-top" [alt]="product.name" style="max-width: 50%; height: auto; align-self: center;">
+          <div class="card-body">
+            <h5 class="card-title">{{ product.name }}</h5>
+            <p>{{product.quant}} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Price: {{ product.price }}</p>
+           
+            <div class="main">
+              <label class="smaller-label">Quantity:</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <button class="btn btn-outline-secondary btn-sm" type="button" (click)="decreaseQuantity(product)">-</button>
+                </div>
+                <div class="text">
+                  <input type="number" class="form-control smaller-input" [(ngModel)]="product.quantity" min="0">
+                </div>
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary btn-sm" type="button" (click)="increaseQuantity(product)">+</button>
+                </div>
+              </div>
+              <br>
+              <div class="form-group">
+                <label for="subscriptionType" class="smaller-label">Subscription Type:</label>
+                <select class="form-control smaller-dropdown" [(ngModel)]="product.subscriptionType" name="subscriptionType">
+                  <option value="daily">Daily</option>
+                  <option value="alternate">Alternate</option>
+                  <option value="one-time">One Time</option>
+                </select>
+              </div>
+            </div>
+            <h4>instructions</h4>
+            <p>* The delivery will be done after the start date</p>
+            <p>* If you want one time delivery select that date in the start date  </p>
+            <div class="main2">
+              <div>
+                <label for="startDate" class="smaller-label">Start Date:</label><br>
+                <input type="date" id="startDate_{{product.id}}" [(ngModel)]="product.startDate" class="smaller-input1" [min]="currentDate" (change)="updateMinEndDate(product)">
+              </div>
+              <div>
+                <label for="endDate" class="smaller-label">End Date:</label><br>
+                <input type="date" id="endDate_{{product.id}}" [(ngModel)]="product.endDate" class="smaller-input1" [min]="getMinEndDate(product)">
+              </div>
+            </div>
+            <br>
+            <a class="btn btn-primary" (click)="addOrder(product)"> (Total Price: {{ calculateTotalPrice(product) }}) &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;&nbsp; &nbsp; ADD</a>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,54 @@
+<!-- Your Angular component's HTML template -->
+
+<h1 style="text-align: center;">ALL CUSTOMERS</h1>
+<table border="2" class="customer-table">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Village</th>
+        <th>Phone Number</th>
+        <th>Actions</th>
+    </tr>
+
+    <tr *ngFor="let customer of customers">
+        <td>{{ customer.id }}</td>
+        <td>{{ customer.firstname }} {{ customer.lastname }}</td>
+        <td>{{ customer.village }}</td>
+        <td>{{ customer.phonenumber }}</td>
+        <td>
+            <button (click)="showOrders(customer.id)" class=" order-button">Show Orders</button>
+            <!-- Add a container to display orders -->
+            <div *ngIf="selectedCustomerId === customer.id">
+                <h2>Orders for {{ customer.firstname }} {{ customer.lastname }}</h2>
+                
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Product ID</th>
+                            <th>Quantity</th>
+                            <th>Subscription Type</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let order of orders">
+                            <td>{{ order.id }}</td>
+                            <td>{{ order.productId }}</td>
+                            <td>{{ order.quantity }}</td>
+                            <td>{{ order.subscriptionType }}</td>
+                            <td>{{ order.startDate }}</td>
+                            <td>{{ order.endDate }}</td>
+                            <td><button class="deliver-button">Delivered order</button></td>
+                            
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <button (click)="goBack()" class="back-button">Back to Customer List</button>
+            </div>
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,57 @@
+.navbar{
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(15, 53, 88);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333; /* Example background color */
+    padding: 10px; /* Adjust padding as needed */
+    z-index: 1000;
+    background: rgb(87, 184, 253); 
+}
+.navbar-logo {
+    width: 70px; /* Adjust the width of the logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Optional: Adjust margin as needed */
+    /* Add any additional styling properties here */
+}
+
+#logincss{
+    position: fixed;
+    right:30px; 
+    width: 80px; 
+    border: 2px solid black; 
+    border-radius: 5px; 
+    text-align: center; 
+    background-color: rgb(35, 116, 255);
+}
+
+#logincss:hover{
+    background-color: rgb(0, 68, 255);
+    box-shadow: 0 0 11px rgb(0, 213, 255); 
+
+}
+
+#logoutcss{
+    position: fixed;
+    right:30px; 
+    width: 75px; 
+    border: 2px solid black; 
+    border-radius: 5px;
+    background-color: rgb(255, 87, 87);
+}
+
+#logoutcss:hover{
+    background-color: rgb(255, 0, 0);
+    box-shadow: 0 0 11px rgb(255, 0, 0); 
+
+}
+
+#colorwhite{
+    color: white;
+}

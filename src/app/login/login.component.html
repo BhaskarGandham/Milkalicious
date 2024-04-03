@@ -1,0 +1,27 @@
+<div class="login-container" style="background-color: rgb(223, 233, 240);">
+    <h2 style="text-align: center; color: white;">Login Form</h2>
+    <form #loginform="ngForm" (ngSubmit)="loginValidate(loginform.value)">
+  
+      <div >
+        <label for="username"> Mobile Number:</label>
+        <input type="text" id="mobile" name="mobile" ngModel #mobile="ngModel" required minlength="10" maxlength="10"/>
+      </div><br>
+  
+      <div>
+        <label for="password" >Password</label>
+        <input type="password" id="password" name="password" ngModel #password="ngModel" required minlength="8" maxlength="12"/>
+      </div><br>
+  
+      <button type="submit" class="login-btn">Login</button>
+
+      <div style="text-align: center; margin-top: 20px; color: rgb(0, 0, 0); text-shadow: rgb(0, 0, 0)">Don't have account? <a routerLink="register">Register</a></div>
+      
+      <div class="error-messages" style="text-align: center;">
+        <div *ngIf="mobile.errors?.['required'] && mobile.touched"><p class="error-text">Enter a valid mobile number</p></div>
+        <div *ngIf="mobile.errors?.['minlength']"><p class="error-text">The min length should be 8</p></div>
+        <div *ngIf="password.errors?.['required'] && password.touched"><p class="error-text">Enter a valid password</p></div>
+        <div *ngIf="password.errors?.['minlength']"><p class="error-text">The min length should be 3</p></div>
+      </div>
+    </form>
+    </div>
+    <app-footer></app-footer>

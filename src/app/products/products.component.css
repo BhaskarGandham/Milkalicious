@@ -1,0 +1,76 @@
+/* Style for product cards */
+.card {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  .card img {
+    max-width: 70%;
+    height: auto;
+    margin: 0 auto;
+  }
+  
+  .card-body {
+    text-align: left;
+    padding: 10px;
+  }
+  
+  .card-title {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  
+  .card-text {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  /* Quantity and Subscription Type section */
+  .main {
+    margin-bottom: 8px;
+  }
+  
+  .smaller-label {
+    font-size: 14px;
+  }
+  
+  .smaller-input {
+    width: 50px;
+  }
+  
+  .smaller-dropdown {
+    width: 120px;
+  }
+  
+  /* Date inputs */
+  .main2 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+  
+  /* Button */
+  .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .card img {
+      max-width: 100%;
+    }
+  }
+  

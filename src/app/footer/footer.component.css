@@ -1,0 +1,45 @@
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #318e9e;
+  padding: 20px;
+  
+}
+
+
+.footer div {
+  flex: 0 0 calc(33.33% - 20px); /* Three columns, adjust as needed */
+  margin: 10px;
+  color: white;
+  text-align: center;
+}
+
+a{
+text-decoration: none;
+color: white;
+}
+
+.footer a:hover {
+  text-decoration: none;
+}
+.logos {
+  display: flex;
+  justify-content: flex-end; /* Align logos to the right */
+  margin-top: 20px; /* Adjust as needed */
+}
+
+.logo {
+  margin-left: 0px; /* Adjust as needed for spacing between logos */
+}
+
+.logo img {
+  width: 40px; /* Adjust as needed */
+  height: 40px; /* Adjust as needed */
+  border-radius: 50%; /* Apply border radius to make the images circular */
+}
+.equal-size-image {
+  width: 100%; /* Set your desired width */
+  height: 200px; /* Set your desired height */
+  object-fit: cover; /* Maintain aspect ratio */
+}

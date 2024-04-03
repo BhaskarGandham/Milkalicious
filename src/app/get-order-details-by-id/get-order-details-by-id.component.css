@@ -1,0 +1,57 @@
+/* Container styling */
+.container {
+    padding-top: 100px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .container input[type="number"] {
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+  }
+  
+  .container button {
+    height: 36px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 0 15px;
+    cursor: pointer;
+  }
+  
+  .table-container {
+    margin-top: 20px;
+  }
+  
+  .table-container table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table-container th, .table-container td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .table-container th {
+    background-color: #f2f2f2;
+  }
+  
+  .table-container tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .table-container tr:hover {
+    background-color: #ddd;
+  }
+  .no-orders-message {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #ff0000;
+  }
+  

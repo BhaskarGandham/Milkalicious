@@ -1,0 +1,60 @@
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.registerdiv {
+    margin: 100px auto; 
+    width: 450px;
+    border: 2px solid #4c7271;
+    border-radius: 20px;
+    background: url(/assets/images/login111.jpeg);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+label {
+    width: 30%;
+    margin-right: 10px;
+    text-align: right;
+}
+
+input,
+select {
+    flex: 1;
+    height: 30px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 248, 240, 0.486);
+}
+
+select {
+    width: calc(100% - 40px); 
+}
+
+
+.registerdiv button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.registerdiv button:hover {
+    background-color: #45a049;
+}

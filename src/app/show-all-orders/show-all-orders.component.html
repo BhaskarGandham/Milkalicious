@@ -1,0 +1,26 @@
+<br><br><br><br><br>
+<h1 style="text-align: center;">ALL ORDERS</h1>
+<br>
+<table border="2" class="order-table">
+    
+  <tr>
+    <th>ID</th>
+    <th>Product ID</th>
+    <th>Quantity</th>
+    <th>Subscription Type</th>
+    <th>Start Date</th>
+    <th>End Date</th>
+    <!-- <th>Orders</th> -->
+  </tr>
+
+  <tr *ngFor="let order of orders">
+    <td>{{ order.id }}</td>
+    <td>{{ order.productId }}</td>
+    <td>{{ order.quantity }}</td>
+    <td>{{ order.subscriptionType }}</td>
+    <td>{{ order.startDate }}</td>
+    <td>{{ order.endDate }}</td>
+    <!-- <td><button>Orders</button></td> -->
+  </tr>
+</table>
+

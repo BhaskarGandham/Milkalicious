@@ -1,0 +1,37 @@
+.wallet-container {
+    background-image: url("/assets/images/Wallet Icon (1).jpeg");
+    background-position: center;
+    margin-top: 150px;
+    margin: auto;
+    height: 250px;
+    width: 350px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   font-weight: bold;
+}
+
+.due-amount {
+    margin-top: 35px;
+}
+
+.amount-info h4 {
+    margin-top: 20px;
+}
+
+.pay-button button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pay-button button:hover {
+    background-color: #0056b3;
+}

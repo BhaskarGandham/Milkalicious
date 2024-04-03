@@ -1,0 +1,51 @@
+<div class="registerdiv">
+    <h3 style="text-align: center;">Registration</h3>
+    <form #registerForm="ngForm" (ngSubmit)="registration()">
+        <div class="form-group">
+            <label for="firstname">First Name:</label>
+            <input type="text" [(ngModel)]="firstname" name="firstname" required>
+        </div>
+        <div class="form-group">
+            <label for="lastname">Last Name:</label>
+            <input type="text" [(ngModel)]="lastname" name="lastname" required>
+        </div>
+        <div class="form-group">
+            <label for="village">Village:</label>
+            <select [(ngModel)]="village" name="village" required>
+                <option value="">Select Village</option>
+                <option value="Bondada">bondada</option>
+                <option value="Jammikunta">jammikunta</option>
+                <option value="Mahadevapatnam">mahadevapatnam</option>
+            </select>
+        </div>
+        <div class="form-group">
+    <label for="phonenumber">Phone Number:</label>
+    <input type="text" [(ngModel)]="phonenumber" name="phonenumber" required  minlength="10" maxlength="10" appPhoneValidator>
+    <div *ngIf="registerForm.controls['phonenumber'].errors?.['invalidPhoneNumber']" class="error-message">
+        <p style="color: red;">*Please enter a valid 10-digit phone number.</p>
+    </div>
+</div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" [(ngModel)]="password" name="password" required appStrongPassword>
+           
+        </div>
+         <div *ngIf="registerForm.controls['password'].errors?.['weakPassword']" style="text-align: center;" class="error-message">
+                <p style="color: red;">*Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one digit, and one special character.</p>
+            </div>
+        <div class="form-group">
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" [(ngModel)]="confirmPassword" name="confirmPassword" required>
+        </div>
+       
+        <div *ngIf="registerForm.controls['confirmPassword'].value !== password && registerForm.controls['confirmPassword'].touched" style="text-align: center;" class="error-message">
+            <p style="color: red;">*Password and confirm password do not match.</p>
+        </div>
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <input type="text" [(ngModel)]="address" name="address" required>
+        </div>
+        <button type="submit" [disabled]="registerForm.invalid || registerForm.controls['confirmPassword'].value !== password || registerForm.controls['password'].errors?.['weakPassword']">Register</button>
+    </form>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,113 @@
+a:hover{
+    cursor: pointer;
+}
+
+.main-content {
+    padding-top: 120px;
+    font-size: 4px;
+    font-weight: bold;
+    color: #000000; /* Text color */
+    text-align: center; /* Center align the text */
+    text-transform: uppercase; /* Convert text to uppercase */
+    letter-spacing: 1px; /* Add letter spacing */
+    line-height: 1.5; /* Set line height */
+}
+ .television-frame {
+    position: relative;
+    width: 800px; /* Adjust width of television frame as needed */
+    height: auto; /* Allow height to adjust based on video */
+    border: 20px solid #000; /* Adjust border size and color to style the television frame */
+    border-radius: 20px;
+    margin-top: -40px; 
+    margin-left: 50px;/* Adjust border radius for rounded corners */
+  }
+  
+  .television-frame::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    border: 10px solid #000;
+    border-top: none;
+    border-radius: 20px 20px 0 0;
+  }
+  
+  .card-video {
+    width: 100%; /* Set width to 100% to maintain aspect ratio */
+    height: 250px;
+    border-radius: 15px; /* Adjust border radius to match the television frame */
+  }
+  /* CSS for the banner container */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+
+}
+
+/* CSS for the background image */
+.background-image {
+    width: 800px;
+    height: 300px;
+    display: block;
+    margin-left: 130px;
+    border: #000 solid;
+    border-radius: 20px;
+}
+
+/* CSS for the centered logo */
+.centered-logo {
+    position: absolute;
+    top: 50%;
+    width: 160px;
+    height: 160px;
+    transform: translate(-50%, -50%);
+}
+.equal-size-image {
+  width: 100%; /* Set your desired width */
+  height: 200px; /* Set your desired height */
+  object-fit: cover; /* Maintain aspect ratio */
+}
+.banner1 {
+  position: relative;
+  width: 100%;
+  height: 300px;/* Adjust height as needed */
+  overflow: hidden;
+}
+
+.background-image1 {
+  width: 800px;
+  height: 300px;
+  display: block;
+  margin-left: 130px;
+  border: #000 solid;
+  border-radius: 20px;
+}
+
+.productscontainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.order-button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: moveButton 3s infinite alternate; /* Button moving animation */
+}
+
+.order-button:hover {
+  background-color: #0056b3;
+}
+
+

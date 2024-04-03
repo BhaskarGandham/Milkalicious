@@ -1,0 +1,64 @@
+<nav class="navbar navbar-expand-lg ">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="home"><img src="assets/images/milkalicious-high-resolution-logo-transparent.png" alt="Milk_Drop" class="navbar-logo"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li *ngIf="!isLoggedIn || isLoggedIn &&  userType ==='customer'" class="nav-item">
+          <a class="nav-link active" routerLink="home" style="color: white;">Home</a>
+        </li>
+        <li *ngIf="isLoggedIn &&  userType ==='customer' " class="nav-item">
+          <a class="nav-link" routerLink="products" style="color: white;">Products</a>
+        </li>
+        <li *ngIf="isLoggedIn &&  userType ==='customer' " class="nav-item">
+          <a class="nav-link" routerLink="walletdue" style="color: white;">Wallet</a>
+        </li>
+        <li *ngIf="isLoggedIn &&  userType ==='customer' " class="nav-item">
+          <a class="nav-link" routerLink="add-to-cart" style="color: white;">cart</a>
+        </li>
+
+
+
+        <li class="nav-item" *ngIf="isLoggedIn &&  userType ==='admin' ">
+          <a class="nav-link" routerLink="adminhome" style="color: white;">Adminhome</a>
+        </li>
+        <li class="nav-item" *ngIf="isLoggedIn &&  userType ==='admin' ">
+          <a class="nav-link" routerLink="show-all-customers" style="color: white;">Customers List</a>
+        </li>
+        <li class="nav-item" *ngIf="isLoggedIn &&  userType ==='admin' ">
+          <a class="nav-link" routerLink="show-all-orders" style="color: white;">show all orders</a>
+        </li>
+        <li class="nav-item" *ngIf="isLoggedIn &&  userType ==='admin' ">
+          <a class="nav-link" routerLink="getorderbyid" style="color: white;">Get Orders List</a>
+          </li>
+        
+
+          <li class="nav-item" *ngIf="isLoggedIn &&  userType ==='boy' ">
+            <a class="nav-link" routerLink="deliveryboy" style="color: white;">Delivery Boy Home Page</a>
+          </li>
+          <li class="nav-item" *ngIf="isLoggedIn &&  userType ==='boy' ">
+            <a class="nav-link" routerLink="deliveryboycustomers" style="color: white;">Customers List</a>
+          </li>
+
+
+        <li *ngIf="!isLoggedIn" class="nav-item" id="logincss">
+          <a class="nav-link" id="colorwhite" routerLink="login">Login</a>
+        </li>
+        <li  class="nav-item" *ngIf="isLoggedIn" id="logoutcss">
+          <button class="nav-link" id="colorwhite"  (click)="logout()">Logout</button>
+        </li>
+        
+      </ul>
+
+
+      <!-- <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form> -->
+    </div>
+  </div>
+</nav>

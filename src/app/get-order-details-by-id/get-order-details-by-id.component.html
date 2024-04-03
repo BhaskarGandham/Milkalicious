@@ -1,0 +1,38 @@
+<div class="container">
+    <div>
+      <label for="customerId">Enter Customer ID:</label>
+      <input type="number" id="customerId" [(ngModel)]="customerId">
+      <button (click)="fetchOrders()">Get Orders</button>
+    </div>
+  </div>
+  <br><br>
+
+  <div *ngIf="orders.length > 0" class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Order ID</th>
+          <th>Product ID</th>
+          <th>Quantity</th>
+          <th>Subscription Type</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of orders">
+          <td>{{ order.id }}</td>
+          <td>{{ order.productId }}</td>
+          <td>{{ order.quantity }}</td>
+          <td>{{ order.subscriptionType }}</td>
+          <td>{{ order.startDate }}</td>
+          <td>{{ order.endDate }}</td>
+          <td>{{order.totalPrice}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="orders.length===0" class="no-orders-message">
+    No orders found for customer ID {{ customerId }}
+  </div>
